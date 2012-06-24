@@ -1,0 +1,24 @@
+<div id="slider1">
+	<div>
+		Slide one content3
+	</div>
+	<div>
+		Slide two content3
+	</div>
+	<div>
+		Slide three content3
+	</div>
+	<div>
+		And so on...3
+	</div>
+</div>
+<script type="text/javascript">
+$.getScript("/assests/js/jquery.bxSlider.min.js", function() {
+	$('#slider1').bxSlider({
+		displaySlideQty :3,
+		moveSlideQty :1,
+		infiniteLoop :false,
+		hideControlOnEnd :true
+	});
+});
+</script>
