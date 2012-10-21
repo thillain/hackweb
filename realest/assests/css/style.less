@@ -6,27 +6,62 @@
  */
 
 /*
+ * Header styles
+ *
+ */
+ 
+@header: hsl(359, 85%, 43%);
+@header1: hsl(0, 0%, 100%);
+
+header .header-wrapper
+{
+    background-color: @header;
+    border-bottom: 2px solid hsl(359, 85%, 43%);
+    border-top: 2px solid hsl(359, 85%, 43%);
+    bottom: 0;
+    height:82px;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.header-wrapper
+{
+    margin:0;padding:0;
+}
+.header-node,.section-nav,.section-content
+{
+    width:990px;margin: 0 auto;
+}
+.header-node > p
+{
+    margin-left:700px;
+    min-height: 26px;
+    position: absolute;
+    top: 10px;
+    visibility: visible;
+    width: 410px;
+}
+
+
+
+/*
  * Navigaton styles
  *
  */
-.header-content{
-    width:945px;
-    margin:0px auto;
-}
-@nice-blue: #5B83AD;
+@nice-blue:hsl(0, 0%, 100%);
+@color:hsl(0, 0%, 0%);
 
 #menu1{
     font-size:12px;
-    background-color:#5B83AD;
+    background:@nice-blue;
     height:40px;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
     -ms-border-radius:5px;
     -o-border-radius:5px;
     border-radius:5px;
-    padding:0 20px;
     display:block;
-    line-height:1
+    line-height:1;
     -moz-box-shadow:0 1px 2px hsla(0, 0%, 0%, 0.15);
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -44,81 +79,90 @@
 
 #menu1 a{
     text-decoration:none;
-    color:#d0d0d0
 }
 
 
 #menu1 .menu-top > li{
-float:left;
-position:relative;
-text-align:center;
--webkit-transition:background-color .2s;
--moz-transition:background-color .2s;
--ms-transition:background-color .2s;
--o-transition:background-color .2s;
-transition:background-color .2s}
+    float:left;
+    position:relative;
+    text-align:center;
+    -webkit-transition:background-color .2s;
+    -moz-transition:background-color .2s;
+    -ms-transition:background-color .2s;
+    -o-transition:background-color .2s;
+    transition:background-color .2s
+}
 
 #menu1 .menu-top > li:hover{
-background-color:#4a4a4a;
--webkit-transition:background-color .2s;
--moz-transition:background-color .2s;
--ms-transition:background-color .2s;
--o-transition:background-color .2s;
-transition:background-color .2s}
+    background-color:hsl(359, 85%, 43%);
+    -webkit-transition:background-color .2s;
+    -moz-transition:background-color .2s;
+    -ms-transition:background-color .2s;
+    -o-transition:background-color .2s;
+    transition:background-color .2s
+}
 
 #menu1 .menu-top .menu-right{
-float:right}
+    float:right
+}
+
 #menu1 .menu-button{
-display:block;
-line-height:40px;
-padding:0 20px;
-color:#d0d0d0;
--webkit-transition:color .2s;
--moz-transition:color .2s;
--ms-transition:color .2s;
--o-transition:color .2s;
-transition:color .2s}
+    display:block;
+    line-height:40px;
+    padding:0 20px;
+    color:@color;
+    -webkit-transition:color 0.4s ease 0s;
+    -moz-transition:color 0.4s ease 0s;
+    -ms-transition:color 0.4s ease 0s;
+    -o-transition:color 0.4s ease 0s;
+    transition:color 0.4s ease 0s;
+}
 
 #menu1 li:hover .menu-button{
-color:#fff;
--webkit-transition:color .2s;
--moz-transition:color .2s;
--ms-transition:color .2s;
--o-transition:color .2s;
-transition:color .2s}
+    color:#fff;
+    -webkit-transition:color  0.4s ease 0s;
+    -moz-transition:color  0.4s ease 0s;
+    -ms-transition:color  0.4s ease 0s;
+    -o-transition:color  0.4s ease 0s;
+    transition:color  0.4s ease 0s;
+}
 
 #menu1 .menu-drop{
-padding-right:15px}
+    padding-right:15px
+}
 
 #menu1 .menu-drop .menu-label{
-padding-right:20px;
-background:url("../images/menu1-drop1.png") no-repeat right;
--webkit-transition:background .2s;
--moz-transition:background .2s;
--ms-transition:background .2s;
--o-transition:background .2s;
-transition:background .2s}
+    padding-right:20px;
+    background:url("../images/menu1-drop1.png") no-repeat right;
+    -webkit-transition:background .2s;
+    -moz-transition:background .2s;
+    -ms-transition:background .2s;
+    -o-transition:background .2s;
+    transition:background .2s
+}
 
 #menu1 li:hover .menu-drop .menu-label{
-background:url("../images/menu1-drop2.png") no-repeat right;
--webkit-transition:background .2s;
--moz-transition:background .2s;
--ms-transition:background .2s;
--o-transition:background .2s;
-transition:background .2s}
+    background:url("../images/menu1-drop2.png") no-repeat right;
+    -webkit-transition:background .2s;
+    -moz-transition:background .2s;
+    -ms-transition:background .2s;
+    -o-transition:background .2s;
+    transition:background .2s
+}
 
 #menu1 .menu-dropdown{
-text-align:left;
-background-color:#4a4a4a;
--webkit-border-radius:0 0 5px 5px;
--moz-border-radius:0 0 5px 5px;
--ms-border-radius:0 0 5px 5px;
--o-border-radius:0 0 5px 5px;
-border-radius:0 0 5px 5px;
-position:absolute;
-left:-5000px;
-opacity:0;
-z-index:100}
+    text-align:left;
+    background-color:#4a4a4a;
+    -webkit-border-radius:0 0 5px 5px;
+    -moz-border-radius:0 0 5px 5px;
+    -ms-border-radius:0 0 5px 5px;
+    -o-border-radius:0 0 5px 5px;
+    border-radius:0 0 5px 5px;
+    position:absolute;
+    left:-5000px;
+    opacity:0;
+    z-index:100
+}
 
 #menu1 li:hover .menu-dropdown{
 left:0;
@@ -197,3 +241,37 @@ width:210px}
 
 #menu1 .menu-dropdown7 p{
 margin-top:7px}
+
+/*
+ * Content styles
+ */
+ .section-wrapper
+ {
+    background-color: hsl(0, 0%, 100%);
+    border-bottom: 0 solid hsl(0, 0%, 100%);
+    border-top: 0 solid hsl(0, 0%, 100%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height:42px;
+ }
+.section-content{
+    background-color: hsl(0, 0%, 100%);
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius:0 0 6px 6px;
+    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.15);
+}
+.section-content:after {
+    clear: both;
+}
+.section-content:before, .section-content:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.section-content:before, .section-content:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}

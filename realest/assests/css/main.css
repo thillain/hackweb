@@ -96,24 +96,25 @@ html, body {
     background-color: hsl(0, 0%, 93%);
 }
 
-.container > header {
-    height: 65px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 900;
+h1{
+    color: hsl(0, 0%, 93%);
+    font: 1.7em/1.1em 'Marcellus SC', serif;
+    font-weight: 400; 
 }
-
-
-
-
-
-
-
-
-
-
-
+.left
+{
+    float: left;
+}
+.right
+{
+    float: right;
+}
+.alignRight {
+    text-align: right;
+}
+.alignLeft {
+    text-align: left;
+}
 
 
 
