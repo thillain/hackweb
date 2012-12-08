@@ -93,7 +93,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 html, body {
-    background-color: hsl(0, 0%, 93%);
+    background: none repeat scroll 0 0 hsl(0, 0%, 93%);
 }
 
 h1{

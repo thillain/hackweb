@@ -54,7 +54,7 @@ header .header-wrapper
 #menu1{
     font-size:12px;
     background:@nice-blue;
-    height:40px;
+    height:42px;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
     -ms-border-radius:5px;
@@ -257,10 +257,11 @@ margin-top:7px}
     height:42px;
  }
 .section-content{
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 93%);
     -webkit-border-radius: 0 0 6px 6px;
     -moz-border-radius:0 0 6px 6px;
-    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.15);
+   /** box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.15); **/
+
 }
 .section-content:after {
     clear: both;
@@ -274,4 +275,22 @@ margin-top:7px}
     content: "";
     display: table;
     line-height: 0;
+}
+.section-content h2
+{
+    font:bold 1.35em/1.1em 'Marcellus SC',serif;
+}
+.section-content h3
+{
+    font:bold 1.25em/1.1em 'Marcellus SC',serif;
+}
+.font_3
+{
+    color: hsl(359, 85%, 43%);
+    font: bold 22px/1.2em "Open Sans","sans-serif";
+}
+.section-content p
+{
+ font:normal 0.9em/1.6em 'Helvetica Neue',Helvetica,Arial,sans-serif;
+ color:hsl(0, 0%, 46%);
 }
