@@ -12,10 +12,11 @@
  
 @header: hsl(359, 85%, 43%);
 @header1: hsl(0, 0%, 100%);
+@header2:radial-gradient(at center center , hsl(7, 72%, 43%) 0%, hsl(7,77%,42%) 100%) ;
 
 header .header-wrapper
 {
-    background-color: @header;
+    background-image: @header2;
     border-bottom: 2px solid hsl(359, 85%, 43%);
     border-top: 2px solid hsl(359, 85%, 43%);
     bottom: 0;
@@ -28,9 +29,9 @@ header .header-wrapper
 {
     margin:0;padding:0;
 }
-.header-node,.section-nav,.section-content
-{
-    width:990px;margin: 0 auto;
+.header-node,.section-nav
+{   margin: 0 auto;
+    width:990px;
 }
 .header-node > p
 {
@@ -69,10 +70,6 @@ header .header-wrapper
 
 #menu1 ul{
     margin:0;padding:0;
-}
-
-
-#menu1 ul{
     list-style:none
 }
 
@@ -256,7 +253,7 @@ margin-top:7px}
     height:42px;
  }
 .section-content{
-    background: url('/assests/img/header-background2.png') no-repeat;
+    background:hsl(6, 79%, 72%);
     -webkit-border-radius: 0 0 6px 6px;
     -moz-border-radius:0 0 6px 6px;
    /** box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.15); **/
