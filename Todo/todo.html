@@ -17,33 +17,49 @@
     <title>ToDo Task</title>
 </head>
 <body>
-<!--<script id="entry-template" type="text/x-handlebars-template">
+<div id="html-goes-here">
+<script id="entry-template" type="text/x-handlebars-template">
 <div class="entry">
   <h1>{{title}}</h1>
   <div class="body">
     {{body}}
   </div>
 </div>
-</script> -->
+</script>
+</div>
 <section id="todoapp">
     <header id="header">
       <h1>todos</h1>
       <input autofocus="" placeholder="What needs to be done?" id="new-todo">
     </header>
-    <section id="main" style="display: none;">
+    <section id="main" style="display:none">
       <input type="checkbox" id="toggle-all">
       <label for="toggle-all">Mark all as complete</label>
-      <ul id="todo-list">
-  
-  </ul>
+     
     </section>
-    <footer id="footer" style="display: none;">
-  <span id="todo-count"><strong>0</strong> items left</span>
+    <footer id="footer" style="display:none">
+
   
   </footer>
+  </section>
+ <section>
+    <h1>Sortable List</h1>
+    <ul class="sortable list" id="sortable1">
+      <li draggable="true">Item 2</li>
+      <li draggable="true">Item 3
+      </li><li draggable="true">Item 4
+      </li><li draggable="true">Item 5
+      </li><li draggable="true">Item 6
+    </li></ul>
   </section>
 <script  src="js/jquery-1.8.3.min.js"></script>
 <script  src="js/handlebars.min.js"></script>
 <script  src="js/app.js"></script>
+<script src="js/jquery.sortable.min.js"></script>
+<script type="text/javascript">
+$(function () {
+ $('#sortable1').sortable(); 
+ });
+</script>
 </body>
 </html>
