@@ -1,0 +1,245 @@
+<!doctype html>
+<!--[if lt IE 7]>
+	<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+	<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+	<html class="no-js lt-ie9" lang="en"> <![endif]-->
+	<!--[if gt IE 8]><!-->
+	<html> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	</head>
+	<body>
+
+		<div><b>1.after</b></div>
+		<p>
+			Insert content, specified by the parameter, after each element in the set of matched elements.
+		</p>
+		<div class="container">
+			<h2>Greetings</h2>
+			<div class="inner">Hello</div>
+			<div class="inner">Goodbye</div>
+		</div>
+		<code>$('.inner').after('<p>Test</p>');</code>
+		<div><b>2 All Selector (“*”)</b></div>
+		<p>
+			Selects all elements.
+		</p>
+		<code>
+			$("*").css("border","3px solid red")
+		</code>
+		<div><b>3.andSelf()</b></div>
+		<p>
+			Add the previous set of elements on the stack to the current set.
+			Note: This function has been deprecated and is now an alias for .addBack(), which should be used with jQuery 1.8 and later.
+		</p>
+		<ul>
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li class="third-item">list item 3</li>
+			<li>list item 4</li>
+			<li>list item 5</li>
+		</ul>
+		<code>
+			$('li.third-item').nextAll().andSelf()
+			.css('background-color', 'red');
+		</code>
+		<div><b>4.animate()</b></div>
+		<p> Perform a custom animation of a set of CSS properties.</p>
+		<div id="clickme">
+			Click here
+		</div>
+		<img id="book" src="book.png" alt="" width="100" height="123"
+		style="position: relative; left: 10px;" />
+		<code>
+			$('#clickme').click(function() {
+			$('#book').animate({
+			opacity: 0.25,
+			left: '+=50',
+			height: 'toggle'
+		}, 5000, function() {
+		// Animation complete.
+	});
+});
+</code>
+<div><b>5.:animated Selector</b></div>
+<p>Select all elements that are in the progress of an animation at the time the selector is run.
+</p>
+<style type="text/css">
+div.ani{ background:yellow; border:1px solid #AAA; width:80px; height:80px; margin:0 5px; float:left; }
+div.colored { background:green; }
+</style>
+<button id="run">Run</button>
+<div class="ani"></div>
+<div id="mover" class="ani"></div>
+<div class="ani"></div>
+<code>
+	$("#run").click(function(){
+	$("div:animated").toggleClass("colored");
+});
+function animateIt() {
+$("#mover").slideToggle("slow", animateIt);
+}
+animateIt();
+</code>
+<div><b>6.append()</b></div>
+<p>Insert content, specified by the parameter, to the end of each element in the set of matched elements.</p>
+<code>
+	$('.inner').append('<p>Test</p>');
+</code>
+<h2>Greetings</h2>
+<div class="container">
+	<div class="inner">Hello</div>
+	<div class="inner">Goodbye</div>
+</div>
+<div><b>7.attr()</b></div>
+<p>Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.</p>
+
+<p>
+	Once there was a <em title="huge, gigantic">large</em> dinosaur...
+</p>
+The title of the emphasis is:<div></div>
+<code>
+	var title = $("em").attr("title");
+	$("div").text(title);
+</code>
+
+<div><b>8.Attribute Contains Prefix Selector [name|="value"]</b></div>
+<p>Selects elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-).</p>
+
+<a href="example.html" hreflang="en">Some text</a>
+<a href="example.html" hreflang="en-UK">Some other text</a>
+<a href="example.html" hreflang="english">will not be outlined</a>
+
+<code>
+	$('a[hreflang|="en"]').css('border','3px dotted green');
+</code>
+
+<div><b>9.Attribute Contains Selector [name*="value"]</b></div>
+<p>Selects elements that have the specified attribute with a value containing the a given substring.</p>
+<input name="man-news" />
+<input name="milkman" />
+<input name="letterman2" />
+<input name="newmilk" />
+<input name="newsLETTER"/>
+<input name="milkman" />
+<input name="jobletter" />
+<code>
+	$('input[name*="man"]').val('has man in it!');
+</code>
+<div><b>10.before()</b></div>
+<p>Insert content, specified by the parameter, before each element in the set of matched elements.</p>
+<div class="container">
+	<h2>Greetings</h2>
+	<div class="binner">Hello</div>
+	<div class="binner">Goodbye</div>
+</div>
+<code>$('.binner').before('<p>Test</p>');</code>
+<div><b>11.:button Selector</b></div>
+<p>Selects all button elements and elements of type button.An equivalent selector to $(":button") using valid CSS is $("button, input[type='button']").
+</p>
+<div><b>12. change()</b></div>
+<form>
+	<input class="target" type="text" value="Field 1" />
+	<select class="target">
+		<option value="option1" selected="selected">Option 1</option>
+		<option value="option2">Option 2</option>
+	</select>
+</form>
+<div id="other">
+	Trigger the handler
+</div>
+<code>
+	$('.target').change(function() {
+	alert('Handler for .change() called.');
+});
+</code>
+<div><b>13. :checked</b></div>
+<p>Matches all elements that are checked.
+</p>
+<input type="checkbox" name="newsletter" value="Hourly" checked>
+<input type="checkbox" name="newsletter" value="Daily">
+<input type="checkbox" name="newsletter" value="Weekly">
+<input type="checkbox" name="newsletter" value="Monthly" checked>
+<input type="checkbox" name="newsletter" value="Yearly">
+<div><b>14. jQuery( "parent > child" )</b></div>
+<p>Selects all direct child elements specified by "child" of elements specified by "parent".</p>
+<ul class="topnav">
+	<li>Item 1</li>
+	<li>Item 2
+		<ul><li>Nested item 1</li><li>Nested item 2</li><li>Nested item 3</li></ul>
+	</li>
+	<li>Item 3</li>
+</ul>
+<code>
+	$("ul.topnav > li").css("border", "3px double red");
+</code>
+<div><b>15.children()</b></div>
+<p>Get the children of each element in the set of matched elements, optionally filtered by a selector</p>
+<ul class="level-1">
+	<li class="item-i">I</li>
+	<li class="item-ii">II
+		<ul class="level-2">
+			<li class="item-a">A</li>
+			<li class="item-b">B
+				<ul class="level-3">
+					<li class="item-1">1</li>
+					<li class="item-2">2</li>
+					<li class="item-3">3</li>
+				</ul>
+			</li>
+			<li class="item-c">C</li>
+		</ul>
+	</li>
+	<li class="item-iii">III</li>
+</ul>
+<code>$('ul.level-2').children().css('background-color', 'red');</code>
+<div><b>16.Class Selector (".class")</b></div>
+<p>Selects all elements with the given class. </p>
+<div><b>17.clone</b></div>
+<p>Create a deep copy of the set of matched elements.</p>
+<div class="container">
+	<div class="hello">Hello</div>
+	<div class="goodbye">Goodbye</div>
+</div>
+<div><b>18. closet</b></div>
+<ul id="one" class="level-1">
+	<li class="item-i">I</li>
+	<li id="ii" class="item-ii">II
+		<ul class="level-2">
+			<li class="item-a">A</li>
+			<li class="item-b">B
+				<ul class="level-3">
+					<li class="item-1">1</li>
+					<li class="item-2">2</li>
+					<li class="item-3">3</li>
+				</ul>
+			</li>
+			<li class="item-c">C</li>
+		</ul>
+	</li>
+	<li class="item-iii">III</li>
+</ul>
+<div><b>19 :contains</b></div>
+<p>Select all elements that contain the specified text.</p>
+<div>John Resig</div>
+<div>George Martin</div>
+<div>Malcom John Sinclair</div>
+<div>J. Ohn</div>
+<code>
+	$("div:contains('John')").css("text-decoration", "underline");
+</code>
+<ul>
+<li>list item 1</li>
+<li>list item 2</li>
+<li>list item 3</li>
+<li>list item 4</li>
+<li>list item 5</li>
+<li>list item 6</li>
+</ul>
+<script  src="js/jquery-1.8.3.min.js"></script>
+<script  src="js/jdoc.js"></script>
+</body>
+</html>
