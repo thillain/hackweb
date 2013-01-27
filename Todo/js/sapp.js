@@ -10,7 +10,7 @@ $(document).ready(function() {
       $("#addTodo").submit(function() {
         if (  $("#new-todo").val() != "" ) {
           localStorage.setItem( "task-"+i, $("#new-todo").val() );
-          $("#todos").append("<li id='task-"+i+"'>"+localStorage.getItem("task-"+i)+" <a href='#'>x</a></li>")
+          $("#todos").append("<li id='task-"+i+"' draggable='true'>"+localStorage.getItem("task-"+i)+" <a href='#'>x</a></li>")
           $("#new-todo-" + i).css('display', 'none');
           $("#new-todo-" + i).slideDown();
           $("#new-todo").val("");
