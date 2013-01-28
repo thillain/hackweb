@@ -4,7 +4,7 @@ $(document).ready(function() {
 
       // Initial loading of tasks
       for( i = 0; i < localStorage.length; i++)
-        $("#todos").append("<li id='task-"+ i +"'>" + localStorage.getItem('task-'+i) + " <a href='#'>x</a></li>");
+        $("#todos").append("<li id='task-"+ i +"'><div><input type='checkbox' class='toggle'>" + localStorage.getItem('task-'+i) + " <a href='#'>x</a></div></li>");
 
       // Add a task
       $("#addTodo").submit(function() {
