@@ -54,20 +54,37 @@ $('input').bind("keypress",function(e){
       	}
       });
       $('#todo-list').bind("change",function( e ) {
-            $(e.target).closest('li').toggleClass('completed');
+            $("input:checked").each( 
+              function() { 
+
+                     
+                 
+           } 
+           );
+
+
+           // $(e.target).closest('li').toggleClass('completed')
+           // $(e.target).closest('li').attr('draggable','false')
+
+
+            //var isChecked = $(this).attr('checked');
+            //alert(isChecked)
+            //$(e.target).closest('li').toggleClass('completed');
             
 
       });
 
+
+
+
       function buildHTML() {
-      	html="<li data-id='task-"+i+"' class=''><div class='view'>\
-      	<input type='checkbox' class='toggle'>\
-      	<label>"+localStorage.getItem('task-'+i)+"</label>\
-      	<button class='destroy'></button></div>\
-      	<input value="+localStorage.getItem('task-'+i)+" class='edit'></li>"
-      	return html;
-      };
-      $(function () {
-      	$('#todos').sortable(); 
-      });
+           html="<li data-id='task-"+i+"' class=''><div class='view'>\
+           <input type='checkbox' class='toggle'>\
+           <label>"+localStorage.getItem('task-'+i)+"</label>\
+           <button class='destroy'></button></div>\
+           <input value="+localStorage.getItem('task-'+i)+" class='edit'></li>"
+           return html;
+     };
+
+
 }); 

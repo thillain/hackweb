@@ -35,8 +35,12 @@
     
     <script type="text/javascript">
     $(function () {
-     $('#todo-list').sortable(); 
+     $('#todo-list').sortable({
+      items: ':not(.disabled)'
+    });
+
    });
+
     </script>
   </body>
   </html>
