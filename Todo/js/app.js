@@ -5,43 +5,26 @@ var key = localStorage.key(i);
 var value = localStorage.getItem(key);
 }**/
 
-
-
 $(document).ready(function() { 
-
 	var i = 0;
 
       // Initial loading of tasks
       for( i = 0; i < localStorage.length; i++)
       	
-            $('#todo-list').append(buildHTML);
+        $('#todo-list').append(buildHTML);
 
-      // Add a task
-     /** $('input').bind("keypress",function(e) {
-            val = $.trim($('#new-todo').val() );
-      	if (  $("#new-todo").val() != "" ) {
-      		localStorage.setItem( "task-"+i, $("#new-todo").val() );
-      		$('#todo-list').append(buildHTML);
-      		$("#new-todo-" + i).css('display', 'none');
-      		$("#new-todo-" + i).slideDown();
-      		i++;
-                  $("#new-todo").val("");
-            }
-            return false;
+      $('input').bind("keypress",function(e){
+        val = $.trim($('#new-todo').val() );
+        if ( e.which !== 13 || !val ) {
+          return;
+          e.preventDefault();
+        }
+        localStorage.setItem( "task-"+i, $("#new-todo").val() );
+        $('#todo-list').append(buildHTML);
+        i++;
+        $('#new-todo').val('');
+
       });
-**/
-$('input').bind("keypress",function(e){
-      val = $.trim($('#new-todo').val() );
-      if ( e.which !== 13 || !val ) {
-            return;
-            e.preventDefault();
-      }
-      localStorage.setItem( "task-"+i, $("#new-todo").val() );
-      $('#todo-list').append(buildHTML);
-      i++;
-      $('#new-todo').val('');
-
-});
       // Remove a task      
       $(".destroy").live("click", function(e) {
       	localStorage.removeItem($(e.target).closest('li').data('id'));
@@ -53,38 +36,42 @@ $('input').bind("keypress",function(e){
       		}
       	}
       });
-      $('#todo-list').bind("change",function( e ) {
-            $("input:checked").each( 
-              function() { 
-
-                     
-                 
-           } 
-           );
 
 
-           // $(e.target).closest('li').toggleClass('completed')
-           // $(e.target).closest('li').attr('draggable','false')
-
-
-            //var isChecked = $(this).attr('checked');
-            //alert(isChecked)
-            //$(e.target).closest('li').toggleClass('completed');
-            
-
+     // Task Toggling
+      $('.toogle').unbind('click');
+      $('.toggle').click( function() {
+        var todo = $(this).parent().parent();
+        todo.toggleClass('completed');
+        $(todo).toggleDisabled();
       });
 
-
-
-
+    //Building the task tags
       function buildHTML() {
-           html="<li data-id='task-"+i+"' class=''><div class='view'>\
-           <input type='checkbox' class='toggle'>\
-           <label>"+localStorage.getItem('task-'+i)+"</label>\
-           <button class='destroy'></button></div>\
-           <input value="+localStorage.getItem('task-'+i)+" class='edit'></li>"
-           return html;
+       html="<li data-id='task-"+i+"' class=''><div class='view'>\
+       <input type='checkbox' class='toggle'>\
+       <label>"+localStorage.getItem('task-'+i)+"</label>\
+       <button class='destroy'></button></div>\
+       <input value="+localStorage.getItem('task-'+i)+" class='edit'></li>"
+       return html;
      };
 
+     //Toggling plugin
+     (function($) {
+      $.fn.toggleDisabled = function() {
+        return this.each(function() {
+          var $this = $(this);
+          if ($this.attr('draggable')) $this.removeAttr('draggable');
+          else $this.attr('draggable', 'true');
+          
+        });
+      };
+    })(jQuery);
 
-}); 
+
+    //Sortable plugin
+    $('#todo-list').sortable({
+      items: ':not(.disabled)'
+    });
+    
+  }); 
