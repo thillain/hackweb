@@ -21,12 +21,13 @@ $("a").click(function() {
 Load default 1.html
 **/
 
-$(function () {
+/**$(function () {
    $.get('/ajax/1.html', function(result) {
 			$('#content div.bx-wrapper').empty();
 			$("#ajax").html(result);
    });
 });
+**/
 
 
 
