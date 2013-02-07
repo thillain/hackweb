@@ -1,5 +1,5 @@
 // jQuery
-$.getScript("/assests/js/jquery.tablesorter.min.js", function() {
+$.getScript("assests/js/jquery.tablesorter.min.js", function() {
 	// call the tablesorter plugin
 	$("#tablesorter").tablesorter({
 		// sort on the first column and third column, order asc
