@@ -7,27 +7,3 @@ $.getScript("/assests/js/jquery.tablesorter.min.js", function() {
 	});
 });
 
-
-$("a").click(function() {
-	var url = $(this).attr('href');
-	$.get(url, function(result) {
-		$('#content div.bx-wrapper').empty();
-		$("#ajax").html(result);
-	});
-	return false;
-});
-
-/**
-Load default 1.html
-**/
-
-/**$(function () {
-   $.get('/ajax/1.html', function(result) {
-			$('#content div.bx-wrapper').empty();
-			$("#ajax").html(result);
-   });
-});
-**/
-
-
-
