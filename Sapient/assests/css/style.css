@@ -1,47 +1,156 @@
-/* =============================================================================
- Reset CSS
- ========================================================================== */
+ /* ============= */
+ /* = RESET CSS = */
+ /* ============= */
+
+ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ abbr, address, cite, code,
+ del, dfn, em, img, ins, kbd, q, samp,
+ small, strong, sub, sup, var,
+ b, i, a,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, dialog, figure, footer, header,
+ hgroup, menu, nav, section,
+ time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight:normal;
+}                     
+
+body {
+  line-height:1;
+}
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  display:block;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+ins, mark {
+  text-decoration:none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+/* ========== */
+/* = LAYOUT = */
+/* ========== */
+html, button, input, select, textarea {
+ font-family: sans-serif;
+ color: #222;
+}
+body {
+ margin: 0;
+ font-size: 1em;
+ line-height: 1.4;
+}
+
+/* ================== */
+/* = SECTION STYLES = */
+/* ================== */ 
 
 /*
- * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- *
- */
-
-
- html {
-   font-size: 100%;
-   -webkit-text-size-adjust: 100%;
-   -ms-text-size-adjust: 100%;
- }
- html, button, input, select, textarea {
-   font-family: sans-serif;
-   color: #222;
- }
- body {
-   margin: 0;
-   font-size: 1em;
-   line-height: 1.4;
- }
-
-/* 
- * Section Styles
- */
- .container
- {
+* Container Style
+*/
+.container
+{
   margin: 0px auto;
   padding: 0px 20px;
- }
- .site-logo
- {
+  max-width:1000px;
+}
+.site-logo
+{
   background: url('../images/sap-logo.png') no-repeat scroll 0 0 transparent;
   height: 48px;
   width: 48px;
   overflow: hidden;
   text-indent: -1000em;
 }
-/* =============================================================================
- Links
- ========================================================================== */
+body header[role="banner"] .site-logo,body header[role="banner"] .site-htext
+{
+  display: inline-block;
+}
+
+.container aside{
+  text-align:left;
+  width:200px;
+}
+.container section
+{
+  width:780px;
+}
+
+
+/*===================
+ * Block CSS
+ *===================/
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+* `contenteditable` attribute is included anywhere else in the document.
+* Otherwise it causes space to appear at the top and bottom of elements
+* that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+* `:before` to contain the top-margins of child elements.
+*/
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+.left{
+  float:left;
+}
+.right{
+  float:right;
+}
+
+
+/*
+ *Links
+ *
+ */
 
  a {
    color: #00e;
@@ -55,13 +164,13 @@
  a:focus {
    outline: thin dotted;
  }
- /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+
  a:hover, a:active {
    outline: 0;
  }
-/* =============================================================================
- Lists
- ========================================================================== */
+ /* ========== */
+ /* = Lists = */
+ /* ========== */
 
  ul {
    margin: 1em 0;
@@ -73,9 +182,9 @@
    margin: 0;
    padding: 0;
  }
-/* =============================================================================
- Tables
- ========================================================================== */
+ /* ========== */
+ /* = Tables = */
+ /* ========== */
 
  table {
    border-collapse: collapse;
@@ -84,116 +193,4 @@
  td {
    vertical-align: top;
  }
-/* =============================================================================
-Forms
-========================================================================== */
 
-form {
-  margin: 0 0 18px;
-}
-
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 27px;
-  font-size: 19.5px;
-  line-height: 36px;
-  color: #333333;
-  border: 0;
-  border: 1px solid #e5e5e5;
-}
-
-.control-group {
-  margin-bottom: 9px;
-}
-
-legend + .control-group {
-  margin-top: 18px;
-  -webkit-margin-top-collapse: separate;
-}
-
-.form-horizontal .control-group {
-  margin-bottom: 18px;
-  *zoom: 1;
-}
-
-.form-horizontal .control-group:before,
-.form-horizontal .control-group:after {
-  display: table;
-  content: "";
-}
-
-.form-horizontal .control-group:after {
-  clear: both;
-}
-
-.form-horizontal .control-label {
-  float: left;
-  width: 150px;
-  padding-top: 5px;
-  text-align: left;
-}
-
-.form-horizontal .controls {
-  *display: inline-block;
-  *padding-left: 20px;
-  margin-left: 170px;
-  *margin-left: 0;
-}
-
-.form-horizontal .controls:first-child {
-  *padding-left: 160px;
-}
-
-label {
-  color: #333333;
-  display: block;
-  margin-bottom: 5px;
-}
-
-label, input, button{
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 18px;
-}
-.input-xlarge {
-  width: 270px;
-}
-
-
-input[type="text"]
-{
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
-}
-
-
-input[type="text"]:focus
-{
-  border-color: rgba(82, 168, 236, 0.8);
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-}
