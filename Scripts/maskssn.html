@@ -6,14 +6,24 @@
 </head>
 <body>
 	<form action="maskssn.html" method="post">
-		<input id="mask0" type="text" value=""/>
-		<input type="hidden" value="" name="hmask0"/>
-		<input id="mask1" type="text" value=""/>
-		<input type="hidden" value="" name="hmask1"/>
-		<input id="mask0" type="text" value=""/>
-		<input type="hidden" value="" name="hmask0"/>
+		<input class="mask" id="mask0" type="text" value=""/>
+		<input type="hidden" value="" name="mask0"/>
+		<input class="mask" id="mask1" type="text" value=""/>
+		<input type="hidden" value="" name="mask1"/>
+		<input class="mask" id="mask2" type="text" value=""/>
+		<input type="hidden" value="" name="mask0"/>
 		<input type="submit" value="submit"/>
 	</form>
 	
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+		$('.mask').on('blur',function(e){
+			var i = this.value.indexOf("");
+			alert($(this).attr("id"))
+		})
+		
+	});
+	</script>	
 </body>
 </html>
