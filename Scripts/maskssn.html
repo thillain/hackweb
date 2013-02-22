@@ -3,15 +3,21 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<script src="jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+	input[type="text"]
+	{
+		width:50px;
+	}
+	</style>
 </head>
 <body>
 	<form action="maskssn.html" method="post">
 		<input class="mask" id="mask0" type="text" value=""/>
-		<input type="hidden" value="" name="mask0"/>
+		<input type="hidden" value="" name="mask01"/>
 		<input class="mask" id="mask1" type="text" value=""/>
-		<input type="hidden" value="" name="mask1"/>
+		<input type="hidden" value="" name="mask12"/>
 		<input class="mask" id="mask2" type="text" value=""/>
-		<input type="hidden" value="" name="mask0"/>
+		<input type="hidden" value="" name="mask03"/>
 		<input type="submit" value="submit"/>
 	</form>
 	
@@ -19,8 +25,9 @@
 	
 	$(document).ready(function() {
 		$('.mask').on('blur',function(e){
-			var i = this.value.indexOf("");
-			alert($(this).attr("id"))
+			mid='#'+$(this).attr("id")
+			alert($(this).next().attr("name"))
+
 		})
 		
 	});
