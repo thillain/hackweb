@@ -27,6 +27,7 @@
 		$('.mask').on('blur',function(e){
 			mid='#'+$(this).attr("id")
 			alert($(this).next().attr("name"))
+			$('input:hidden').val($('#mask').val());
 
 		})
 		
