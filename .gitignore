@@ -3,3 +3,5 @@ Gemfile
 Gemfile.lock
 promoters.html
 promoters_files
+_site
+_config.yml

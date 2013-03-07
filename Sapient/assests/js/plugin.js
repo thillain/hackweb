@@ -29,3 +29,10 @@ $("section.main").html(data);
 })
 	return false;
 });
+
+//Set Focus
+$('body').on('click', '#button', function() {
+  if($('input[name=full_name]').val() == '') {
+    $('input[name=full_name]').focus();
+  }
+});
