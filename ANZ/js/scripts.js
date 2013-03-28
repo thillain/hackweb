@@ -20,12 +20,12 @@ if(firstname == '') {
 	return false;
 }
 if(middlename == '') {
-	$(this).find("label[for='middlename']").append("<span style='display:none' class='red'> - Please enter your last name.</span>");
+	$(this).find("label[for='middlename']").append("<span style='display:none' class='red'> - Please enter your middle name.</span>");
 	$(this).find("label[for='middlename'] span").fadeIn('medium');
 	return false;
 }
 if(lastname == '') {
-	$(this).find("label[for='lastname']").append("<span style='display:none' class='red'> - Please enter a valid username.</span>");
+	$(this).find("label[for='lastname']").append("<span style='display:none' class='red'> - Please enter a valid lastname.</span>");
 	$(this).find("label[for='lastname'] span").fadeIn('medium');
 	return false;
 }
