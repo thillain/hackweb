@@ -2,11 +2,11 @@
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
    ========================================================================== */
 
-html,
-button,
-input,
-select,
-textarea {
+   html,
+   button,
+   input,
+   select,
+   textarea {
     color: #222;
 }
 
@@ -25,23 +25,8 @@ body {
     text-shadow: none;
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
 img {
     vertical-align: middle;
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
 }
 
 textarea {
@@ -60,7 +45,7 @@ textarea {
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 
-body {
+   body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
@@ -71,183 +56,243 @@ body {
 
 /* ===================
     ALL: Orange Theme
-   =================== */
+    =================== */
 
-.header-container {
-    border-bottom: 20px solid #597DB7;
-}
+    .header-container {
+        border-bottom: 20px solid #597DB7;
+    }
 
-.footer-container,
-.main aside {
-    border-top: 20px solid #597DB7;
-}
+    .footer-container,
+    .main aside {
+        border-top: 20px solid #597DB7;
+    }
 
-.header-container,
-.footer-container,
-.main aside {
-    background: radial-gradient(#476CA6, #597DB7) repeat scroll 0 0 transparent;
-}
+    .header-container,
+    .footer-container,
+    .main aside {
+        background: radial-gradient(#476CA6, #597DB7) repeat scroll 0 0 transparent;
+    }
 
-.title {
-    color: white;
-}
-
-/* ==============
-    MOBILE: Menu
-   ============== */
-
-nav ul {
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-
-    color: white;
-    background: #e44d26;
-}
-
-nav a:hover,
-nav a:visited {
-    color: white;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
+    .title {
+        color: white;
+    }
 
 /* ==============
     MOBILE: Main
-   ============== */
+    ============== */
 
-.main {
-    padding: 30px 0;
-}
+    .main {
+        padding: 30px 0;
+    }
 
-.main article h1 {
-    font-size: 2em;
-}
-
-.main aside {
-    color: white;
-    padding: 0px 5% 10px;
-}
-
-.footer-container footer {
-    color: white;
-    padding: 20px 0;
-}
+    .footer-container footer {
+        color: white;
+        padding: 20px 0;
+    }
 
 /* ===============
     ALL: IE Fixes
-   =============== */
+    =============== */
 
-.ie7 .title {
-    padding-top: 20px;
-}
+    .ie7 .title {
+        padding-top: 20px;
+    }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   /* ----- Registration Form ----- */
+   .register form {
+    padding: 20px 50px 40px 50px;
+    background: #f8f8f8;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    text-align: center;
+}
 
+.register form input {
+    width: 95%;
+    height: 30px;
+    background: #fcfcfc;
+    border: 1px solid #ddd;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset;
+    color: #888;
+    font-size: 16px;
+}
 
+.register form input:focus {
+    border: 1px solid #ccc;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
+.register form label {
+    margin: 7px 0 10px 5px;
+    font-size: 16px;
+    text-align: left;
+}
 
+.register form label span {
+    font-style: italic;
+}
 
+.register form input:-moz-placeholder { color: #aaa; }
+.register form input:-ms-input-placeholder { color: #aaa; }
+.register form input::-webkit-input-placeholder { color: #aaa; }
 
+.register form button {
+    cursor: pointer;
+    width: 60%;
+    height: 42px;
+    margin-top: 25px;
+    padding: 0;
+    background: #eb4141;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 0;
+    -moz-box-shadow: 0 15px 30px 0 rgba(255,255,255,.1) inset;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(255,255,255,.1) inset;
+    box-shadow: 0 15px 30px 0 rgba(255,255,255,.1) inset;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
 
+.register form button:hover {
+    -moz-box-shadow: 0 -15px 30px 0 rgba(255,255,255,.05) inset;
+    -webkit-box-shadow: 0 -15px 30px 0 rgba(255,255,255,.05) inset;
+    box-shadow: 0 -15px 30px 0 rgba(255,255,255,.05) inset;
+}
 
+.register form button:active {
+    -moz-box-shadow:
+    0 -15px 30px 0 rgba(255,255,255,.05) inset,       
+    0 5px 8px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow:
+    0 -15px 30px 0 rgba(255,255,255,.05) inset,       
+    0 5px 8px 0 rgba(0,0,0,.1) inset;
+    box-shadow:
+    0 -15px 30px 0 rgba(255,255,255,.05) inset,       
+    0 5px 8px 0 rgba(0,0,0,.1) inset;
+}
+.red
+{
+    color: #EB4141;
+}
 
+/* ==========================================================================
+   Bootstrap Helpers
+   ========================================================================== */
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"],.uneditable-input 
+{
+ display: inline-block;
+ height: 20px;
+ padding: 4px 6px;
+ margin-bottom: 10px;
+ font-size: 14px;
+ line-height: 20px;
+ color: #555555;
+ vertical-align: middle;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+}
+input[type="text"],.uneditable-input
+{
+   background-color: #ffffff;
+   border: 1px solid #cccccc;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+   -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+   transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+input[type="text"],.uneditable-input
+{
+ border-color: rgba(82, 168, 236, 0.8);
+ outline: 0;
+ outline: thin dotted \9;
+ /* IE6-9 */
 
-
-
-
-
+ -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+ -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+ box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+   
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+   @media only screen and (min-width: 480px) {
 
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
+    .register form button { width: 97%; }
 
-    nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
-    }
 
-    nav li:first-child a {
-        margin-left: 0;
-    }
 
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
 }
-
 @media only screen and (min-width: 768px) {
 
 /* ====================
     WIDE: CSS3 Effects
-   ==================== */
+    ==================== */
 
-    .header-container,
-    .main aside {
+    .header-container {
         -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
+        -moz-box-shadow: 0 5px 10px #aaa;
+        box-shadow: 0 5px 10px #aaa;
     }
 
 /* ============
     WIDE: Menu
-   ============ */
+    ============ */
 
     .title {
         float: left;
     }
 
-    nav {
-        float: right;
-        width: 38%;
-    }
-
-/* ============
+  /* ============
     WIDE: Main
-   ============ */
-
-    .main article {
+    ============ */
+    [class*="span"] {
         float: left;
-        width: 57%;
+        min-height: 1px;
+        margin-left: 20px;
     }
-
-    .main aside {
-        float: right;
-        width: 28%;
+    .span6 {
+        width: 352px;
     }
 }
 
@@ -255,11 +300,19 @@ nav a:hover {
 
 /* ===============
     Maximal Width
-   =============== */
+    =============== */
 
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
+    }
+    [class*="span"] {
+        float: left;
+        min-height: 1px;
+        margin-left: 30px;
+    }
+    .span6 {
+        width: 570px;
     }
 }
 
@@ -267,7 +320,7 @@ nav a:hover {
    Helper classes
    ========================================================================== */
 
-.ir {
+   .ir {
     background-color: transparent;
     border: 0;
     overflow: hidden;
@@ -329,7 +382,7 @@ nav a:hover {
    Print styles
    ========================================================================== */
 
-@media print {
+   @media print {
     * {
         background: transparent !important;
         color: #000 !important; /* Black prints faster: h5bp.com/s */
@@ -354,9 +407,9 @@ nav a:hover {
      * Don't show links for images, or javascript/internal links
      */
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
+     .ir a:after,
+     a[href^="javascript:"]:after,
+     a[href^="#"]:after {
         content: "";
     }
 
