@@ -8,12 +8,18 @@ $('.register form').submit(function(){
 	$(this).find("label[for='lastname']").html('Last Name');
 	$(this).find("label[for='address1']").html('Address Line1');
 	$(this).find("label[for='address2']").html('Address Line2');
+	$(this).find("label[for='city']").html('City');
+	$(this).find("label[for='state']").html('State');
+	$(this).find("label[for='pcode']").html('Postcode');
 ////
 var firstname = $(this).find('input#firstname').val();
 var middlename = $(this).find('input#middlename').val();
 var lastname = $(this).find('input#lastname').val();
 var address1 = $(this).find('input#address1').val();
 var address2 = $(this).find('input#address2').val();
+var city = $(this).find('input#city').val();
+var state = $(this).find('input#state').val();
+var pcode = $(this).find('input#pcode').val();
 if(firstname == '') {
 	$(this).find("label[for='firstname']").append("<span style='display:none' class='red'> - Please enter your first name.</span>");
 	$(this).find("label[for='firstname'] span").fadeIn('medium');
@@ -37,6 +43,21 @@ if(address1 == '') {
 if(address2 == '') {
 	$(this).find("label[for='address2']").append("<span style='display:none' class='red'> - Please enter a valid Address.</span>");
 	$(this).find("label[for='address2'] span").fadeIn('medium');
+	return false;
+}
+if(city == '') {
+	$(this).find("label[for='city']").append("<span style='display:none' class='red'> - Please enter a valid City.</span>");
+	$(this).find("label[for='city'] span").fadeIn('medium');
+	return false;
+}
+if(state == '') {
+	$(this).find("label[for='state']").append("<span style='display:none' class='red'> - Please enter a valid State.</span>");
+	$(this).find("label[for='state'] span").fadeIn('medium');
+	return false;
+}
+if(pcode == '') {
+	$(this).find("label[for='pcode']").append("<span style='display:none' class='red'> - Please enter a valid Post Code.</span>");
+	$(this).find("label[for='pcode'] span").fadeIn('medium');
 	return false;
 }
 });
