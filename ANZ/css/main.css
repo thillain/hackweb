@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   HTML5  styles 
    ========================================================================== */
 
    html,
@@ -41,11 +41,7 @@ textarea {
 }
 
 
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
-
-   body {
+body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
