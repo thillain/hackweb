@@ -11,35 +11,93 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 	<!-- Fav and touch icons -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-	<link rel="shortcut icon" href="../assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assests/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assests/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assests/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assests/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="assests/ico/favicon.png">
+	<link rel="stylesheet" href="assests/style/normalize.css">
+	<link rel="stylesheet" href="assests/style/main.css">
+
 </head>
 
 
 <body>
-	<nav>
-		<ul>
-			<li><a href="javascript:void(0)">Home</a></li>
-			<li><a href="javascript:void(0)">About us</a></li>
-			<li><a href="javascript:void(0)">Contact us</a></li>
+	<div id="wrapper">
+		<div class="header-container">
+			<header role="banner">
+				
+				<h1 class="imagereplaced">
+					<a href="javascript:void(0)">Sapient</a>
+				</h1>
+				<script type="text/x-handlebars">
+				<nav id="nav" role="navigation">
+				<ul>
+				<li><a href="#">Home</a></li>
+				<li>{{#linkTo 'project'}}Projects{{/linkTo}}</li>
+				<li>{{#linkTo 'about'}}About us{{/linkTo}}</li>
+				<li><a href="#">Contact us</a></li>
 
-		</ul>
-	</nav>
-	<section>
-		<div id="content-template"></div>
-		<script id="semantic-template" type="text/x-handlebars-template">
-		{{#each objects}}
-		<li>{{image}}</li>
-		{{/each}}
+				</ul>
+				</nav>
+				{{outlet}}
+				</script>
+				<script type="text/x-handlebars" id="about">
+				<div class="about">
+				<p>
+				My name is Paul and I have over 8 years experience as a front end developer, working with clients such as Flight Center, AOL and most recently Virgin Holidays.
+				</p>
+				</div>
+				</script>
+				<script type="text/x-handlebars" id="project">
+				<div class="project">
+				<p>
+				My name is Paul1222 and I have over 8 years experience as a front end developer, working with clients such as Flight Center, AOL and most recently Virgin Holidays.
+				</p>
+				</div>
+				</script>
+				<div class="clearfix"></div>
+			</header>
+		</div>
+		<aside>
+			Thillai Arasu
+		</aside>
+		<div class="main-container">
+			<section id="banner">
+				<h1>Contact Us</h1>
+			</section>
+			<section>
+				<div id="content-template"></div>
+				<script id="semantic-template" type="text/x-handlebars-template">
+				{{#each objects}}
+				<li>{{image}}</li>
+				{{/each}}
 
-		</script>
-	</section>
+				</script>
+			</section>
+			<section>
+				<form method="post" action="">
+					<input type="text" placeholder="Firstname Lastname"/>
+					<input type="password" placeholder="Password"/>
+					<input type="password" placeholder="Confirm Password"/>
+					<input type="email" placeholder="Email"/>
+					<input type="text" placeholder="Website"/>
+					<input type="submit" value="Submit"/>
+				</form>
+			</section>
+		</div>
+		<div class="footer-container">
+			<footer>
+			</footer>
+		</div>
+	</div>
+	
+	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="assests/script/jquery.min.js"><\/script>')</script>
-	<script src="assests/script/handlebars.js"></script>
+	<script src="assests/script/handlebars-1.0.0-rc.4.js"></script>
+	<script src="assests/script/ember-1.0.0-rc.6.js"></script>
+
 	<script src="assests/script/app.js"></script>
 
 </body>
