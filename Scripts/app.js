@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$(function() { 
 		$.ajax({
-			url:'http://judearasu.github.io/sample.xml',
+			url:'https://github.com/judearasu.private.atom?token=8e2df4c2c72f699c0bb23bece8f866a7',
 			dataType:'xml',
 			type:'GET',
 			success:function(xml) {
