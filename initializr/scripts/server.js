@@ -23,6 +23,7 @@
     clients.forEach(function(client) { client.send(path); }); // send path of changed file
 });
 
+ 
 
 // Configure our HTTP server to respond with Hello World to all requests.
 /*
@@ -43,7 +44,12 @@ console.log("Server running at http://127.0.0.1:8000/");
 var server = http.createServer(function(request, response) {
 	var uri = url.parse(request.url).pathname
 	, filename = path.join(process.cwd(), uri);
-
+	var now = new Date();
+	var dateAndTime = now.toUTCString();
+	var stream = fs.createWriteStream('machine.log', {
+		'flags': 'a+',
+		'encoding': 'utf8'
+	});
 	path.exists(filename, function(exists) {
 		if(!exists) {
 			response.writeHead(404, {"Content-Type": "text/plain"});
@@ -64,15 +70,27 @@ var server = http.createServer(function(request, response) {
 
 			response.writeHead(200);
 			response.write(file, "binary");
+			
+			stream.write(dateAndTime + " ", 'utf8');
+			stream.write(request.headers['user-agent'] + "\n", 'utf8');
+			stream.write(request.connection.remoteAddress + ": ", 'utf8')
+			stream.write(request.method + " ", 'utf8')
+			stream.write(request.url + "\n", 'utf8');
+			stream.end();
 			response.end();
 		});
 	});
 });
 
+
 /** wraps basic web server in an SSE connection over which file system changes are broadcast */
 server.listen(parseInt(port, 10), function () {
-    var sse = new SSE(server);
+	var sse = new SSE(server);
     sse.on('connection', function (client) { // register watcher when connection starts
-        clients.push(client);
+    	clients.push(client);
     });
 });
+
+/** Log module **/
+
+console.log("Static file server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
