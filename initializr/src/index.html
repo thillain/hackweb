@@ -23,39 +23,51 @@
 </head>
 <body>
   <header class="wrapper clearfix" role="banner">
-    <h1 class="title">Sapient Logo</h1>
-    <nav role="navigation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Project name</a>
+    </div>
+    <div class="navbar-collapse collapse">
+     <nav role="navigation">
+       <ul class="nav navbar-nav navbar-right">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About us</a></li>
+         <li><a href="#">Projects</a></li>
+         <li><a href="#">Contact Us</a></li>
+       </ul>
+     </nav>
+   </div>
+   
+   
+ </header>
 
 
-  <div class="page-wrap container">
-    <div class="row">
-     <div class="col-md-3" role="sidebar">
-      <div class="sidebar">
-        <section>
-          <img src="images/item-1.png" alt="Contactus"/>
-        </section>
-      </div><!-- #sidebar -->
-    </div><!-- #col-md-3 -->
-    <div class="col-md-9" role="main">
+ <div class="page-wrap container clearfix">
+  <div class="row">
+   <div class="col-md-3" role="sidebar">
+    <div class="sidebar">
+      <section>
+        <img src="images/item-1.png" alt="Contactus"/>
+      </section>
+    </div><!-- #sidebar -->
+  </div><!-- #col-md-3 -->
+  <div class="col-md-9" role="main">
 
-      <article>
+    <article>
 
-        <section>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-        </section>
+      <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+      </section>
 
-       
-  </article>
 
-</div><!-- #col-md-9 -->
+    </article>
+
+  </div><!-- #col-md-9 -->
 
 </div> <!-- #row -->
 </div> <!-- #page-wrap -->
