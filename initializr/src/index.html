@@ -28,9 +28,9 @@
         <a id="menu-toggle" class="anchor-link" href="#">Menu</a>
         <ul class="nav nav-list">
          <li><a href="#">Home</a></li>
-         <li><a href="#">About us</a></li>
+         <li><a href="#about">About us</a></li>
          <li><a href="#">Projects</a></li>
-         <li><a href="#">Contact Us</a></li>
+         <li><a href="#contact">Contact Us</a></li>
        </ul>
      </nav>
      <select>
@@ -58,10 +58,12 @@
   <div class="col-md-9" role="main">
 
     <article>
-     {{ message }}
+     
     <!-- Angular templating -->
     <!-- This is where the place content will be injected -->
-    <div ng-view></div>
+    <div ng-view>
+{{ message }}
+    </div>
 
     </article>
 
