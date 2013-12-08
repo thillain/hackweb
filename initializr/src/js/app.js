@@ -57,5 +57,10 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 	scotchApp.controller('projectController', function($scope) {
 		$scope.message = 'Project! JK. This is just a demo.';
 	});
+<<<<<<< HEAD
 
 **/
+=======
+
+
+>>>>>>> 475557016c48fcd3818322593a1e59a4480549b5
