@@ -1,16 +1,14 @@
-[
-	{
-		"image" : "images/item-1.png",
-		"heading" : "Careers",
-		"text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-	},
-	{
-		"image" : "images/item-2.png",
-		"heading" : "Contact Us",
-		"text" : "Morbi tincidunt commodo scelerisque."
-	},{
-		"image" : "images/item-3.png",
-		"heading" : "About Us",
-		"text" : "Duis porttitor diam vitae leo elementum accumsan."
-	}
-]
+{
+  "home": {
+    "title": "Home",
+    "content": "This is the home page. Welcome"
+  },
+  "about": {
+    "title": "About",
+    "content": "This is the about page. Welcome"
+  },
+  "contact": {
+    "title": "Contact",
+    "content": "This is the contact page. Welcome"
+  }
+}

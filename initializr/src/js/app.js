@@ -29,7 +29,14 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 			.when('/contact', {
 				templateUrl : 'views/contact.html',
 				controller  : 'contactController'
+			})
+
+			// route for the contact page
+			.when('/project', {
+				templateUrl : 'views/project.html',
+				controller  : 'projectController'
 			});
+
 
 		});
 
@@ -47,9 +54,8 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 		$scope.message = 'Contact us! JK. This is just a demo.';
 	});
 
+	scotchApp.controller('projectController', function($scope) {
+		$scope.message = 'Project! JK. This is just a demo.';
+	});
 
-scotchApp.config(function ($routeProvider) {
-  $routeProvider
-    .when('/page/:slug', {templateUrl: 'layout/layout.html', controller: 'RouteController'})
-    .otherwise({redirectTo: 'views/home'});
-});
+
