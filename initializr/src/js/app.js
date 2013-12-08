@@ -9,7 +9,7 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 	});
 
 	// configure our routes
-	scotchApp.config(function($routeProvider) {
+/**	scotchApp.config(function($routeProvider) {
 		$routeProvider
 
 			// route for the home page
@@ -42,7 +42,7 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
 	// create the controller and inject Angular's $scope
 	scotchApp.controller('mainController', function($scope) {
-		// create a message to display in our view
+		// create a message to dipslay in our view
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
@@ -58,4 +58,4 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 		$scope.message = 'Project! JK. This is just a demo.';
 	});
 
-
+**/
