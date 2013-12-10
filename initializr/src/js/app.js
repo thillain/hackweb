@@ -8,8 +8,14 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
+    scotchApp.controller('mainController',function($scope,$http) {
+		$http.get('pages.json').success(function (data) {
+			$scope.myData = data;
+		})
+	});
+
 	// configure our routes
-scotchApp.config(function($routeProvider) {
+	scotchApp.config(function($routeProvider) {
 		$routeProvider
 
 			// route for the home page
@@ -59,4 +65,4 @@ scotchApp.config(function($routeProvider) {
 	});
 
 
-
+	

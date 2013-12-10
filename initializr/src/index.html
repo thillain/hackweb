@@ -21,12 +21,14 @@
   <script src="bower_components/less/dist/less-1.5.1.min.js"></script>
   <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
-<body ng-controller="mainController" data-ng-init="init()">
+<body ng-controller="mainController">
+
+
   <header class="wrapper clearfix" role="banner">
     <div class="navbar-header">
       <nav role="navigation">
         <a id="menu-toggle" class="anchor-link" href="#">Menu</a>
-       <ul class="nav nav-list">
+        <ul class="nav nav-list">
          <li><a href="#">Home</a></li>
          <li><a href="#about">About us</a></li>
          <li><a href="#project">Projects</a></li>
@@ -37,27 +39,32 @@
         <li ng-class="{active: slug == 'about'}"><a href="#/page/about">about</a></li>
         <li ng-class="{active: slug == 'contact'}"><a href="#/page/contact">Contact</a></li>
       </ul>
-    
-  </div>
-</header>
 
-<div class="page-wrap container clearfix">
-  <div class="row">
-   <div class="col-md-3" role="sidebar">
-    <div class="sidebar">
-      <section role="carsouel">
-        <img src="images/item-1.png" alt="Contactus"/>
-      </section>
-    </div><!-- #sidebar -->
-  </div><!-- #col-md-3 -->
-  <div class="col-md-9" role="main">
-   <h2></h2>
-    <article>
+    </div>
+  </header>
+
+  <div class="page-wrap container clearfix">
+    <div class="row">
+     <div class="col-md-3" role="sidebar">
+      <div class="sidebar">
+        <section role="carsouel">
+          <img src="images/item-1.png" alt="Contactus"/>
+        </section>
+      </div><!-- #sidebar -->
+    </div><!-- #col-md-3 -->
+    <div class="col-md-9" role="main">
+     <div ng-repeat="post in myData">
+      <h3>try</h3>
+       <p>{{post.title}}</p>
+     </div>
+     <h2></h2>
+     <article>
 
       <!-- Angular templating -->
       <!-- This is where the place content will be injected -->
       <div ng-view>
         {{ message }}
+
       </div>
 
     </article>
