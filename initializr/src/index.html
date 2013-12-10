@@ -21,10 +21,15 @@
   <script src="bower_components/less/dist/less-1.5.1.min.js"></script>
   <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
-<body ng-controller="mainController">
+<body>
 
 
   <header class="wrapper clearfix" role="banner">
+    <header ng-controller="dataController">
+      <div ng-repeat="product in posts">
+        {{product.title}}
+      </div>
+    </header>
     <div class="navbar-header">
       <nav role="navigation">
         <a id="menu-toggle" class="anchor-link" href="#">Menu</a>
@@ -43,7 +48,7 @@
     </div>
   </header>
 
-  <div class="page-wrap container clearfix">
+  <div class="page-wrap container clearfix" ng-controller="mainController">
     <div class="row">
      <div class="col-md-3" role="sidebar">
       <div class="sidebar">
