@@ -26,6 +26,7 @@
 
   <header class="wrapper clearfix" role="banner">
     <header ng-controller="dataController">
+      {{posts['home'].title}}
       <div ng-repeat="product in posts">
         {{product.title}}
       </div>
