@@ -1,0 +1,19 @@
+doctype
+html
+  head
+    link(rel="stylesheet", href="/main.css")
+    link(rel="stylesheet", href="/style.css")
+    link(rel="stylesheet", href="/assets/css/jquery.bxslider.css")
+
+  body
+    != yield
+  script(type="text/javascript", src="jquery-2.1.0.min.js")
+  script(type="text/javascript", src="jquery-ui.min.js")
+  script(type="text/javascript", src="jquery.menu.js")
+  script(type="text/javascript", src="/assets/js/jquery.bxslider.js")
+<script type="text/javascript">
+$('#nav').spasticNav();
+</script>
+<script type="text/javascript">
+$('.bxslider').bxSlider({mode:'fade'});
+</script>
