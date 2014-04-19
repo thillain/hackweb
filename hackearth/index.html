@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>Search for Artist</title>
+	<!-- Bootstrap core CSS -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<a class="btn btn-primary" href="javascript:void(0);" role="button">Search Artist</a>
+		<div id="myModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="inputname" class="col-sm-4 control-label">Name</label>
+								<div class="col-sm-4">
+									<input type="text" class="form-control" id="inputname">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputtracknumber" class="col-sm-4 control-label">No. of Tracks</label>
+								<div class="col-sm-4">
+									<input type="number" class="form-control" id="inputtracknumber">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-4 col-sm-4">
+									<button type="button" class="btn btn-primary">Search</button>
+								</div>
+							</div>
+						</form>
+					</div>
+<!--					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>-->
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</div>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
