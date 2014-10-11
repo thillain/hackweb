@@ -1,0 +1,43 @@
+{"products" :[{
+					"name": "Item 1",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua.",
+					"category": "Category 1",
+					"price": 275,
+					"id": "1fb00a8cda12b8d7"
+					},
+					{
+					"name": "Item 2",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua.",
+					"category": "Category 2",
+					"price": 48.5,
+					"id": "bb059330f2b2d86e"
+					},
+					{
+					"name": "Item 3",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua.",
+					"category": "Category 3",
+					"price": 19.95,
+					"id": "60d4f82c7f41b87e"
+					},
+					{
+					"name": "Item 4",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua.",
+					"category": "Category 4",
+					"price": 34.95,
+					"id": "753b6488e4275863"
+					},
+					{
+					"name": "Item 5",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua.",
+					"category": "Category 5",
+					"price": 79500,
+					"id": "e8fe85eab1f9b913"
+					},
+					{
+					"name": "Item 6",
+					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua.",
+					"category": "Category 6",
+					"price": 16,
+					"id": "e8c4a582043c799b"
+					}]
+				}
